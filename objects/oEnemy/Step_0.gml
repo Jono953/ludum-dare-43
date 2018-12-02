@@ -22,19 +22,19 @@ if actionTimer > -1{
 actionTimer--	
 }
 if action = 1{
-hsp = 16
+hsp = spd
 vsp = 0
 }
 if action = 2{
-hsp = -16
+hsp = -spd
 vsp = 0
 }
 if action = 3{
 hsp = 0
-vsp = 16
+vsp = spd
 }
 if action = 4{
 hsp = 0
-vsp = -16
+vsp = -spd
 }
 }

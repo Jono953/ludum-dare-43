@@ -1,6 +1,6 @@
 draw_set_font(fGame)
 for(i=0;i<6;i++){
-draw_sprite(sFlowers,i,(i*160),0)
+draw_sprite(sFlowers,i,(i*160)+64,64)
 if i=4{
 draw_text_color((i*160)+80,96,string(fc[i]),c_black,c_black,c_black,c_black,1)
 }else{
@@ -9,16 +9,16 @@ draw_text_color((i*160)+80,96,string(fc[i]),c_white,c_white,c_white,c_white,1)
 }
 for(i=0;i<ds_list_size(potions);i++){
 if type[ds_list_find_value(potions,i)] = 0{
-draw_sprite(sPotion,0,i*80,1080-160)
-draw_sprite_ext(sPotion,1,i*80,1080-160,1,1,0,colors[ds_list_find_value(potions,i)],1)
+draw_sprite(sPotion,0,i*80+64,1080-110)
+draw_sprite_ext(sPotion,1,i*80+64,1080-110,1,1,0,colors[ds_list_find_value(potions,i)],1)
 }
 if type[ds_list_find_value(potions,i)] = 1{
-draw_sprite(sScroll,0,i*80,1080-160)
-draw_sprite_ext(sScroll,1,i*80,1080-160,1,1,0,colors[ds_list_find_value(potions,i)],1)
+draw_sprite(sScroll,0,i*80+64,1080-110)
+draw_sprite_ext(sScroll,1,i*80+64,1080-110,1,1,0,colors[ds_list_find_value(potions,i)],1)
 }
 if type[ds_list_find_value(potions,i)] = 2{
-draw_sprite(sRune,0,i*80,1080-160)
-draw_sprite_ext(sRune,1,i*80,1080-160,1,1,0,colors[ds_list_find_value(potions,i)],1)
+draw_sprite(sRune,0,i*80+64,1080-110)
+draw_sprite_ext(sRune,1,i*80+64,1080-110,1,1,0,colors[ds_list_find_value(potions,i)],1)
 }
 }
 draw_set_font(fFine)

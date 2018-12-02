@@ -9,7 +9,11 @@ if currentPotion = 2{
 	//tornado	
 }
 if currentPotion = 3{
-	//tornado	
+	if !instance_exists(oFireTornado){
+	instance_create_depth(x,y,5,oFireTornado)
+	}else{
+	ds_list_add(potions,3)
+	}
 }
 if currentPotion = 4{
 	//projectile	

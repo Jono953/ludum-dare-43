@@ -135,6 +135,22 @@
             }
         },
         {
+            "Key": "53647d26-52e7-4f11-be47-6cc2ea026961",
+            "Value": {
+                "id": "d1603fdf-83ce-45c2-b0ef-f6825d13b424",
+                "resourcePath": "objects\\oInteractable\\oInteractable.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5633af53-b450-4bab-83e1-60b029f73026",
+            "Value": {
+                "id": "a7899a86-b4cb-48f6-8372-5bb8e66bf62b",
+                "resourcePath": "objects\\oEarthTornado\\oEarthTornado.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5efc3c01-2f99-446a-ace3-e7963162395d",
             "Value": {
                 "id": "7a9a5bf5-9ed0-4fad-9d7e-fd2faf111ad7",
@@ -175,10 +191,26 @@
             }
         },
         {
+            "Key": "6c580543-141e-4800-8725-6f5fcc014262",
+            "Value": {
+                "id": "c0e5d0e7-4d60-45ce-8a39-7a181df40112",
+                "resourcePath": "sprites\\sPlayerWalk\\sPlayerWalk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "70c1d99b-fd63-42d9-85b6-33da274975f7",
             "Value": {
                 "id": "30e7bcce-b6fb-4aeb-ae16-4e843469f370",
                 "resourcePath": "objects\\oCrafting\\oCrafting.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "72d30574-3ac1-4fac-9b96-a698dc653eae",
+            "Value": {
+                "id": "194f1db0-9b5a-4208-9baa-81a6e69236a3",
+                "resourcePath": "objects\\oHitbox\\oHitbox.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -204,6 +236,14 @@
                 "id": "17eae959-757e-417c-9c4c-3af2a5a381a1",
                 "resourcePath": "views\\83f43121-957a-4af1-80ff-3544e5ff3bb4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "84bc5633-e634-4eff-9c6e-079fe2b03b5a",
+            "Value": {
+                "id": "10dacc31-70a5-44e4-8316-4ab9a3e6019e",
+                "resourcePath": "sprites\\sFireTornado\\sFireTornado.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -255,6 +295,14 @@
             }
         },
         {
+            "Key": "98bc3e03-188c-438c-997b-ac383b3353af",
+            "Value": {
+                "id": "40a3cf0a-4b80-47b1-a630-44f861b411f3",
+                "resourcePath": "sprites\\sPlayerRun\\sPlayerRun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9c6ed8f2-be65-47db-aa86-93079145466c",
             "Value": {
                 "id": "29e6434f-3719-4219-9f76-e93e16dba798",
@@ -284,6 +332,14 @@
                 "id": "b1e49e4b-ecc7-4d16-9ce5-681e0f0a7297",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a990423a-dec4-4cd2-911e-fb78edfec1f0",
+            "Value": {
+                "id": "ddba8616-145f-47dc-8e9a-5c72666c0bab",
+                "resourcePath": "sprites\\sHitbox\\sHitbox.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -375,10 +431,18 @@
             }
         },
         {
+            "Key": "fad8592e-b820-46a9-b48c-8e2a529cc311",
+            "Value": {
+                "id": "5d46269f-a60a-4e65-a5b9-464ef1023a43",
+                "resourcePath": "objects\\oFireTornado\\oFireTornado.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fedc7e4d-392d-4ef9-bcfe-7a63baba0323",
             "Value": {
                 "id": "1c6c4393-c425-45fa-a971-eeafba278233",
-                "resourcePath": "sprites\\sPlayer\\sPlayer.yy",
+                "resourcePath": "sprites\\sPlayerIdle\\sPlayerIdle.yy",
                 "resourceType": "GMSprite"
             }
         }
