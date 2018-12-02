@@ -88,6 +88,21 @@ fireAtk = 0
 lightAtk = 0
 darkAtk--
 }
-if invun > -1{
+if invun > 0{
 invun--	
+if image_alpha = 0{
+image_alpha = 1	
+}else{
+image_alpha = 0	
+}
+}else{
+image_alpha = 1	
+}
+if invun = 0 and place_meeting(x,y,oEnemy){
+if instance_exists(oCrafting){
+instance_destroy(oCrafting)
+instance_destroy(oButton)
+}
+invun = 30
+oGame.hp -= irandom_range(20,40)
 }

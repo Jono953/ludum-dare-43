@@ -13,4 +13,5 @@ resistFire = 0
 resistLight = 2
 resistDark = 1
 hp = 25
+invun = 0
 image_blend = c_red

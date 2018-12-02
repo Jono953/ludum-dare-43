@@ -24,5 +24,8 @@ draw_sprite_ext(sRune,1,i*80+64,1080-110,1,1,0,colors[ds_list_find_value(potions
 draw_set_font(fFine)
 draw_text(0,1080-250,"HP: "+string(hp)+"/"+string(mhp))
 draw_text(0,1080-280,"Focus: "+string(focus)+"%")
+draw_text(0,1080-310,"player zx,zy "+string(oPlayer.zx)+","+string(oPlayer.zy))
+draw_text(0,1080-340,"camera zx,zy "+string(oCamera.zx)+","+string(oCamera.zy))
+
 draw_set_font(fGame)
 draw_sprite(sSelector,0,selector*80,1080-192)

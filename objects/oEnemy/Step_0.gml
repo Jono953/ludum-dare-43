@@ -1,6 +1,6 @@
 zx = int64(x/1920)
 zy = int64(y/1080)
-if zx = oPlayer.zx or zy = oPlayer.zy{
+if zx = oPlayer.zx and zy = oPlayer.zy{
 if !place_meeting(x+hsp,y,oWall){
 	x += hsp
 	hsp = 0
@@ -37,7 +37,18 @@ hsp = 0
 vsp = -spd
 }
 }
-if place_meeting(x,y,oHitbox){
+if invun > 0{
+invun--	
+if image_alpha = 1{
+image_alpha = 0	
+}else{
+image_alpha = 1	
+}
+}else{
+image_alpha = 1	
+}
+if place_meeting(x,y,oHitbox) and invun = 0{
+invun = 15
 if instance_nearest(x,y,oHitbox).damageType = "air"{
 hp -= instance_nearest(x,y,oHitbox).damage * resistAir
 }else if instance_nearest(x,y,oHitbox).damageType = "water"{

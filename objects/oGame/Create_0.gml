@@ -71,7 +71,7 @@ cost[11] = 20
 cost[12] = 25
 cost[13] = 30
 cost[14] = 30
-cost[15] = 100
+cost[15] = 99
 
 type[0] = 0
 type[1] = 0
@@ -90,8 +90,8 @@ type[13] = 2
 type[14] = 2
 type[15] = 2
 
-hp = 500
-mhp = 500
+hp = 100
+mhp = 100
 focus = 100
 currentRoom = 0
 selector = 0

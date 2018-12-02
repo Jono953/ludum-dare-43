@@ -21,6 +21,11 @@ if focus < 0{
 focus = 0	
 }
 
-if focus > 80 and !instance_exists(oCrafting){
+if keyboard_check_pressed(ord("Q")){
+	if !instance_exists(oCrafting){
 	instance_create_depth(oCamera.zx*1920+264,oCamera.zy*1080+200,10,oCrafting)
+	}else{
+	instance_destroy(oCrafting)
+	instance_destroy(oButton)
+	}
 }
