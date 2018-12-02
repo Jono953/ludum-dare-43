@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "1d24834f-31d8-4011-bbb4-b62a6b227abf",
+            "Value": {
+                "id": "7f607201-894f-4cb0-9b38-490be00b9128",
+                "resourcePath": "sprites\\sEnemy2\\sEnemy2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1d2b64a1-d1da-4692-b5ec-496e62275ee4",
             "Value": {
                 "id": "9e678544-1302-4a1f-9c6e-6186fba462ac",

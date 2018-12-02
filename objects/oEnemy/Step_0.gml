@@ -1,5 +1,8 @@
 zx = int64(x/1920)
 zy = int64(y/1080)
+x = clamp(x,zx*1920,zx*1920+1920)
+y = clamp(y,zy*1080,zy*1080+1080)
+
 if zx = oPlayer.zx and zy = oPlayer.zy{
 if !place_meeting(x+hsp,y,oWall){
 	x += hsp
@@ -25,7 +28,11 @@ if distance_to_object(oPlayer) <= 500 and attackType = "charge"{
 	hspeed = 0
 	vspeed = 0
 }else if distance_to_object(oPlayer) <= 500 and attackType = "make_bomb"{
+	if irandom(100) > 30{
 	instance_create_depth(x,y,-10,oBomb)	
+	}
+	hsp = random_range(-32,32)
+	vsp = random_range(-32,32)
 }
 action = irandom_range(0,5)	
 actionTimer = irandom_range(30,60)
@@ -138,4 +145,8 @@ slowTime--
 spd = 6
 }else{
 spd = 12	
+}
+image_speed = abs(hsp+vsp) * 2
+if abs(hsp+vsp) = 0{
+image_index = 0	
 }
