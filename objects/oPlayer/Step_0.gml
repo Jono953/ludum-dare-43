@@ -42,8 +42,7 @@ image_xscale = 1
 image_xscale = -1	
 }else{
 if vsp = 0{
-sprite_index = sPlayerIdle	
-image_xscale = 1
+sprite_index = sPlayerIdle
 }else{
 if abs(vsp) > 12{
 sprite_index = sPlayerRun	
@@ -66,6 +65,12 @@ if attackTimer > -1{
 attackTimer--	
 }
 if mouse_check_button_pressed(mb_left) and !place_meeting(mouse_x,mouse_y,oButton){
+if x < mouse_x{
+image_xscale = 1	
+}
+if x > mouse_x{
+image_xscale = -1	
+}
 if oGame.focus >= 0{
 	attackTimer = 12
 	attackType = 0

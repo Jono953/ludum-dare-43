@@ -38,4 +38,5 @@ slot3 = -1;
 if zx != oPlayer.zx or zy != oPlayer.zy{
 instance_destroy()	
 }
+depth = -9999
 

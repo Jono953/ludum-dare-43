@@ -3,23 +3,32 @@ zy = int64(y/1080)
 if zx = oPlayer.zx and zy = oPlayer.zy{
 if !place_meeting(x+hsp,y,oWall){
 	x += hsp
-	hsp = 0
+	hsp = approach(hsp,0,1)
 }else{
 hsp = 0	
 }
 if !place_meeting(x,y+vsp,oWall){
 	y += vsp
-	vsp = 0
+	vsp = approach(vsp,0,1)
 }else{
 vsp = 0	
 }
 if actionTimer = 0{
-action = irandom(5)	
+if distance_to_object(oPlayer) <= 500 and attackType = "charge"{
+	move_towards_point(oPlayer.x,oPlayer.y,32)
+	hsp = hspeed
+	vsp = vspeed 
+	hspeed = 0
+	vspeed = 0
+}
+action = irandom_range(0,5)	
 actionTimer = irandom_range(30,60)
+
 }
 if actionTimer > -1{
 actionTimer--	
 }
+if distance_to_object(oPlayer) > 500{
 if action = 1{
 hsp = spd
 vsp = 0
@@ -37,6 +46,7 @@ hsp = 0
 vsp = -spd
 }
 }
+
 if invun > 0{
 invun--	
 if image_alpha = 1{
@@ -68,4 +78,5 @@ instance_destroy(instance_nearest(x,y,oHitbox))
 }
 if hp < 0{
 instance_destroy()	
+}
 }
