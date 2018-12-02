@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "261fd9f0-3ac6-49b1-864d-57fb64c69474",
+            "Value": {
+                "id": "4ba792cd-bda6-4ad1-974b-d576e33c41f8",
+                "resourcePath": "scripts\\draw_shadow\\draw_shadow.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2ae36433-070e-4ef4-9ccd-7fa7fa5aa87f",
             "Value": {
                 "id": "81afbe94-4df8-403c-984b-1451b489e36f",
@@ -448,7 +456,8 @@
         }
     ],
     "script_order": [
-        "6a798d3e-6002-4d36-82f1-0170bd083015"
+        "6a798d3e-6002-4d36-82f1-0170bd083015",
+        "261fd9f0-3ac6-49b1-864d-57fb64c69474"
     ],
     "tutorial": ""
 }

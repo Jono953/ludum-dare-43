@@ -1,24 +1,24 @@
 zx = int64(x/1920)
 zy = int64(y/1080)
 if keyboard_check(ord("W")){
-vsp = -spd;	
+vsp = approach(vsp,-spd,1)	
 }else if keyboard_check(ord("S")){
-vsp = spd;	
+vsp = approach(vsp,spd,1);	
 }else{
-vsp = 0	
+vsp = approach(vsp,0,2)	
 }
 if keyboard_check(ord("A")){
-hsp = -spd;	
+hsp = approach(hsp,-spd,1);	
 }else if keyboard_check(ord("D")){
-hsp = spd;	
+hsp = approach(hsp,spd,1);	
 }else{
-hsp = 0	
+hsp = approach(hsp,0,2)
 }
 if speedUp > 0{
 speedUp--
 spd = 24
 }else{
-spd = 12
+spd = 16
 }
 if !place_meeting(x+hsp,y,oWall){
 	x += hsp
