@@ -1,6 +1,10 @@
 hsp = 0
 vsp = 0
 z = 0
+if place_meeting(x,y,oWall){
+x += irandom_range(-256,256)
+y += irandom_range(-256,256)
+}
 fireTime = 0;
 lightTime = 0
 darkTime = 0

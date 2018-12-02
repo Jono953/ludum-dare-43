@@ -21,7 +21,23 @@ colors[12] = make_color_rgb(71,71,57)
 colors[13] = make_color_rgb(255,231,181)
 colors[14] = make_color_rgb(34,5,56)
 colors[15] = make_color_rgb(0,0,0)
-
+for(i=0;i<100;i++){
+ranNum = irandom(100)
+if ranNum > 95{
+with instance_create_depth(irandom(5760),irandom(7560),-10,oEnemy){
+attackType = "charge"
+resistAir = 1
+resistWater = 1
+resistEarth = 1
+resistFire = 1
+resistLight = 3
+resistDark = 0
+hp = 50
+spd = 24
+image_blend = make_color_rgb(100,100,100)
+}
+}
+}
 name[0] = "Failure"
 name[1] = "Self-Hastening"
 name[2] = "Conjure Comet"

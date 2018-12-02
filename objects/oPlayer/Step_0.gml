@@ -112,6 +112,9 @@ invun = 30
 with oGame{
 damage(irandom_range(10,20))	
 }
+if instance_nearest(x,y,oEnemy).attackType = "make_fire"{
+fireTime = 60	
+}
 if x < instance_nearest(x,y,oEnemy).x{
 hsp -= 24	
 }else{

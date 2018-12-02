@@ -1,7 +1,8 @@
 zx = int64(x/1920)
 zy = int64(y/1080)
-x = clamp(x,zx*1920,zx*1920+1920)
-y = clamp(y,zy*1080,zy*1080+1080)
+
+x = clamp(x,zx*1920+32,zx*1920+1920-32)
+y = clamp(y,zy*1080+32,zy*1080+1080-32)
 
 if zx = oPlayer.zx and zy = oPlayer.zy{
 if !place_meeting(x+hsp,y,oWall){
@@ -19,9 +20,9 @@ vsp = 0
 if actionTimer = 0{
 if distance_to_object(oPlayer) <= 500 and attackType = "charge"{
 	if slowTime = 0{
-	move_towards_point(oPlayer.x,oPlayer.y,32)
+	move_towards_point(oPlayer.x,oPlayer.y,spd*3)
 	}else{
-	move_towards_point(oPlayer.x,oPlayer.y,16)	
+	move_towards_point(oPlayer.x,oPlayer.y,spd*1.5)	
 	}
 	hsp = hspeed
 	vsp = vspeed 
@@ -31,8 +32,10 @@ if distance_to_object(oPlayer) <= 500 and attackType = "charge"{
 	if irandom(100) > 30{
 	instance_create_depth(x,y,-10,oBomb)	
 	}
-	hsp = random_range(-32,32)
-	vsp = random_range(-32,32)
+	hsp = random_range(-spd*3,spd*3)
+	vsp = random_range(-spd*3,spd*3)
+}else if distance_to_object(oPlayer) <= 500 and attackType = "make_fire"{
+	
 }
 action = irandom_range(0,5)	
 actionTimer = irandom_range(30,60)
@@ -41,7 +44,9 @@ actionTimer = irandom_range(30,60)
 if actionTimer > -1{
 actionTimer--	
 }
-if distance_to_object(oPlayer) > 500{
+if distance_to_object(oPlayer) <= 500 and attackType = "chase"{
+	move_towards_point(oPlayer.x,oPlayer.y,spd*1.33)
+}else if distance_to_object(oPlayer) > 500{
 if action = 1{
 hsp = spd
 vsp = 0
