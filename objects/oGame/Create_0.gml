@@ -24,10 +24,10 @@ colors[15] = make_color_rgb(0,0,0)
 
 name[0] = "Failure"
 name[1] = "Self-Hastening"
-name[2] = "Conjure Dust Storm"
-name[3] = "Conjure Flame Tornado"
+name[2] = "Conjure Comet"
+name[3] = "Conjure Flare"
 name[4] = "Summon Air Bolt"
-name[5] = "Conjure Storm of Swords"
+name[5] = "Conjure Sword"
 name[6] = "Augment Environment: Enemy Slowness"
 name[7] = "Augment Attack: Fire"
 name[8] = "Augment Attack: Light"

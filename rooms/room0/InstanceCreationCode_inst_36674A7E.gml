@@ -1,0 +1,1 @@
+attackType = "make_bomb"

@@ -64,7 +64,7 @@ if attackTimer > -1{
 if attackTimer > -1{
 attackTimer--	
 }
-if mouse_check_button_pressed(mb_left) and !place_meeting(mouse_x,mouse_y,oButton){
+if mouse_check_button_pressed(mb_left) and !place_meeting(mouse_x,mouse_y,oButton) and mouse_y < oCamera.y+450{
 if x < mouse_x{
 image_xscale = 1	
 }
@@ -109,5 +109,32 @@ instance_destroy(oCrafting)
 instance_destroy(oButton)
 }
 invun = 30
-oGame.hp -= irandom_range(20,40)
+with oGame{
+damage(irandom_range(10,20))	
+}
+if x < instance_nearest(x,y,oEnemy).x{
+hsp -= 24	
+}else{
+hsp += 24		
+}
+if y < instance_nearest(x,y,oEnemy).y{
+vsp -= 24	
+}else{
+vsp += 24		
+}
+}
+if fireTime > 0{
+fireTime--
+if irandom(100) > 60{
+instance_create_depth(x,y,-10,oParticleFire)	
+}
+if invun = 0{
+for(i=0;i<10;i++){
+instance_create_depth(x,y,-10,oParticleFire)	
+}
+with oGame{
+damage(5)	
+}
+invun = 30
+}
 }

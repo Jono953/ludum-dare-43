@@ -15,11 +15,17 @@ vsp = 0
 }
 if actionTimer = 0{
 if distance_to_object(oPlayer) <= 500 and attackType = "charge"{
+	if slowTime = 0{
 	move_towards_point(oPlayer.x,oPlayer.y,32)
+	}else{
+	move_towards_point(oPlayer.x,oPlayer.y,16)	
+	}
 	hsp = hspeed
 	vsp = vspeed 
 	hspeed = 0
 	vspeed = 0
+}else if distance_to_object(oPlayer) <= 500 and attackType = "make_bomb"{
+	instance_create_depth(x,y,-10,oBomb)	
 }
 action = irandom_range(0,5)	
 actionTimer = irandom_range(30,60)
@@ -60,23 +66,76 @@ image_alpha = 1
 if place_meeting(x,y,oHitbox) and invun = 0{
 invun = 15
 if instance_nearest(x,y,oHitbox).damageType = "air"{
-hp -= instance_nearest(x,y,oHitbox).damage * resistAir
+damage(instance_nearest(x,y,oHitbox).damage2 * resistAir)
 }else if instance_nearest(x,y,oHitbox).damageType = "water"{
-hp -= instance_nearest(x,y,oHitbox).damage * resistWater
+damage(instance_nearest(x,y,oHitbox).damage2 * resistWater)
 }else if instance_nearest(x,y,oHitbox).damageType = "earth"{
-hp -= instance_nearest(x,y,oHitbox).damage * resistEarth
+damage(instance_nearest(x,y,oHitbox).damage2 * resistEarth)
 }else if instance_nearest(x,y,oHitbox).damageType = "fire"{
-hp -= instance_nearest(x,y,oHitbox).damage * resistFire
+damage(instance_nearest(x,y,oHitbox).damage2 * resistFire)
+fireTime = 60
 }else if instance_nearest(x,y,oHitbox).damageType = "light"{
-hp -= instance_nearest(x,y,oHitbox).damage * resistLight
+damage(instance_nearest(x,y,oHitbox).damage2 * resistLight)
 }else if instance_nearest(x,y,oHitbox).damageType = "dark"{
-hp -= instance_nearest(x,y,oHitbox).damage * resistDark
+damage(instance_nearest(x,y,oHitbox).damage2 * resistDark)
 }else{
-hp -= instance_nearest(x,y,oHitbox).damage
+damage(instance_nearest(x,y,oHitbox).damage2)
 }
 instance_destroy(instance_nearest(x,y,oHitbox))	
 }
 if hp < 0{
+effect_create_above(ef_explosion,x,y,2,c_orange)
 instance_destroy()	
+
 }
+}
+if x < oPlayer.x{
+image_xscale = -1	
+}else{
+image_xscale = 1	
+}
+if fireTime > 0{
+fireTime--
+if irandom(100) > 60{
+instance_create_depth(x,y,-10,oParticleFire)	
+}
+if invun = 0{
+for(i=0;i<10;i++){
+instance_create_depth(x,y,-10,oParticleFire)	
+}
+damage(5 * resistFire)
+invun = 30
+}
+}
+if lightTime > 0{
+lightTime--
+if irandom(100) > 60{
+	effect_create_above(ef_flare,x+random_range(-80,80),y+random_range(-80,80),1,c_yellow)
+}
+if invun = 0{
+for(i=0;i<10;i++){
+effect_create_above(ef_flare,x+random_range(-80,80),y+random_range(-80,80),1,c_yellow)	
+}
+damage(10 * resistLight)
+invun = 30
+}
+}
+if darkTime > 0{
+darkTime--
+if irandom(100) > 60{
+	effect_create_above(ef_flare,x+random_range(-80,80),y+random_range(-80,80),1,c_purple)
+}
+if invun = 0{
+for(i=0;i<10;i++){
+effect_create_above(ef_flare,x+random_range(-80,80),y+random_range(-80,80),1,c_purple)	
+}
+damage(10 * resistDark)
+invun = 30
+}
+}
+if slowTime > 0{
+slowTime--
+spd = 6
+}else{
+spd = 12	
 }

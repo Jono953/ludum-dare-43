@@ -4,7 +4,7 @@ image_xscale = 128
 image_yscale = 128
 ref = "fireTornado"
 damageType = "fire"
-damage = irandom_range(10,15)
+damage2 = irandom_range(10,15)
 }
 ref = "fireTornado"
 time = 150

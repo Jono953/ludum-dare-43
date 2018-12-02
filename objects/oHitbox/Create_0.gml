@@ -1,3 +1,3 @@
 ref = ""
 damageType = "normal"
-damage = 0
+damage2 = 0

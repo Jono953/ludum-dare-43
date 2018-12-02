@@ -4,7 +4,7 @@ image_xscale = 128
 image_yscale = 128
 ref = "earthTornado"
 damageType = "earth"
-damage = irandom_range(10,15)
+damage2 = irandom_range(10,15)
 }
 ref = "earthTornado"
 time = 150

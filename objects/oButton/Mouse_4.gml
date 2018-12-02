@@ -20,10 +20,15 @@ if type = 8 and oCrafting.slot3 != -1{
 	if random(100) < focus{
 	ds_list_add(potions,oCrafting.slot3)
 	}else{
-	oGame.hp-=10	
+	with oGame{
+	damage(10)	
+	}
 	}
 	focus -= cost[oCrafting.slot3]/2
-	hp -= cost[oCrafting.slot3]
+	with oGame{
+		damage(cost[oCrafting.slot3])
+		}
+	
 	}
 	
 	oCrafting.slot3 = -1

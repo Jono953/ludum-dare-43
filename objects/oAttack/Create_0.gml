@@ -14,7 +14,7 @@ with instance_create_depth(x,y,5,oHitbox){
 image_xscale = 32
 image_yscale = 32
 ref = "bullet" + string(instance_nearest(x,y,oAttack).id)
-damage = irandom_range(8,12)
+damage2 = irandom_range(8,12)
 if oPlayer.fireAtk > 0{
 	damageType = "fire"
 }

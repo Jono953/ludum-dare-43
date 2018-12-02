@@ -30,6 +30,7 @@ if currentPotion = 3{
 if currentPotion = 4{
 	oPlayer.attackTimer = 25
 	oPlayer.attackType = 1	
+	instance_create_depth(x,y,-10,oAirBolt)
 }
 if currentPotion = 5{
 	oPlayer.attackTimer = 25
@@ -38,6 +39,12 @@ if currentPotion = 5{
 if currentPotion = 6{
 	oPlayer.attackTimer = 25
 	oPlayer.attackType = 1	
+	for(i=0;i<250;i++){
+	effect_create_above(ef_ring,x+irandom_range(-1920,1920),y+irandom_range(-1080,1080),3,c_blue)	
+	}
+	with oEnemy{
+	slowTime = 450	
+	}
 }
 if currentPotion = 7{
 	if oPlayer.lightAtk = 0 and oPlayer.darkAtk = 0{
@@ -70,6 +77,7 @@ if currentPotion = 10{
 	//projectile
 		oPlayer.attackTimer = 25
 	oPlayer.attackType = 1	
+	instance_create_depth(x,y,-10,oFireball)
 }
 if currentPotion = 11{
 	//projectile summon
@@ -83,22 +91,37 @@ if currentPotion = 12{
 }
 if currentPotion = 13{
 	//screen overlay
+	for(i=0;i<250;i++){
+	effect_create_above(ef_flare,x+irandom_range(-1920,1920),y+irandom_range(-1080,1080),2,c_yellow)	
+	}
 		oPlayer.attackTimer = 25
 	oPlayer.attackType = 1	
+	with oEnemy{
+	lightTime = 300	
+	}
 }
 if currentPotion = 14{
 	//screen overlay
+	for(i=0;i<250;i++){
+	effect_create_above(ef_flare,x+irandom_range(-1920,1920),y+irandom_range(-1080,1080),2,c_purple)	
+	}
 		oPlayer.attackTimer = 25
 	oPlayer.attackType = 1	
+	with oEnemy{
+	darkTime = 300	
+	}
 }
 if currentPotion = 15{
 		oPlayer.attackTimer = 25
 	oPlayer.attackType = 1	
 	with oEnemy{
 	if zx = oPlayer.zx and zy = oPlayer.zy{
-	hp -= 9999
+	damage(9999)
+	oGame.hp += 10
 	}
 	}
 }
-if keyboard_check_pressed(ord("R")){room_restart()}
+if keyboard_check_pressed(ord("R")){
+	room_restart()
+}
 ds_list_delete(potions,selector)
