@@ -31,8 +31,8 @@ if !place_meeting(x,y+vsp,oWall){
 }else{
 vsp = 0	
 }
-if abs(hsp) > 16 or abs(vsp) > 16{
-//sprite_index = sPlayerRun	
+if abs(hsp) > 12 or abs(vsp) > 12{
+sprite_index = sPlayerRun	
 }else if abs(hsp) > 0 or abs(vsp) > 0{
 sprite_index = sPlayerWalk	
 }
@@ -45,6 +45,10 @@ if vsp = 0{
 sprite_index = sPlayerIdle	
 image_xscale = 1
 }else{
-sprite_index = sPlayerWalk	
+if abs(vsp) > 12{
+sprite_index = sPlayerRun	
+}else if abs(vsp) > 0{
+sprite_index = sPlayerWalk
+}
 }
 }
