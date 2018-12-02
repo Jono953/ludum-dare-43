@@ -88,3 +88,6 @@ fireAtk = 0
 lightAtk = 0
 darkAtk--
 }
+if invun > -1{
+invun--	
+}

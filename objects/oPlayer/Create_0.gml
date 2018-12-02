@@ -9,3 +9,4 @@ lightAtk = 0
 darkAtk = 0
 attackTimer = -1;
 attackType = -1;
+invun = 0

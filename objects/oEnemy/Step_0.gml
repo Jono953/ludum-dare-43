@@ -1,7 +1,6 @@
 zx = int64(x/1920)
 zy = int64(y/1080)
-
-if zx = oPlayer.zx and zy = oPlayer.zy{
+if zx = oPlayer.zx or zy = oPlayer.zy{
 if !place_meeting(x+hsp,y,oWall){
 	x += hsp
 	hsp = 0

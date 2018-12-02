@@ -35,5 +35,7 @@ slot3 = 15;
 }else{
 slot3 = -1;	
 }
-
+if zx != oPlayer.zx or zy != oPlayer.zy{
+instance_destroy()	
+}
 

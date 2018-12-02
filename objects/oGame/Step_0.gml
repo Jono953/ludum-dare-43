@@ -20,3 +20,7 @@ focus = 100
 if focus < 0{
 focus = 0	
 }
+
+if focus > 80 and !instance_exists(oCrafting){
+	instance_create_depth(oCamera.zx*1920+264,oCamera.zy*1080+200,10,oCrafting)
+}
