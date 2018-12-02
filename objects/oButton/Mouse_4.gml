@@ -25,8 +25,17 @@ if type = 8 and oCrafting.slot3 != -1{
 	focus -= cost[oCrafting.slot3]/2
 	hp -= cost[oCrafting.slot3]
 	}
+	
 	oCrafting.slot3 = -1
+	if oGame.fc[oCrafting.slot2] = 0{
 	oCrafting.slot2 = -1
+	}else{
+	oGame.fc[oCrafting.slot2]--
+	}
+	if oGame.fc[oCrafting.slot1] = 0{
 	oCrafting.slot1 = -1
+	}else{
+	oGame.fc[oCrafting.slot1]--
+	}
 }
 }

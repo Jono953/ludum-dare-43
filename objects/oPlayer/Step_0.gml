@@ -52,3 +52,39 @@ sprite_index = sPlayerWalk
 }
 }
 }
+if abs(hsp) < 2 and abs(vsp) < 2{
+if attackTimer > -1{
+	if attackType = 0{
+	sprite_index = sPlayerAttackLight	
+	}
+	if attackType = 1{
+	sprite_index = sPlayerAttackHeavy	
+	}
+}
+}
+if attackTimer > -1{
+attackTimer--	
+}
+if mouse_check_button_pressed(mb_left) and !place_meeting(mouse_x,mouse_y,oButton){
+if oGame.focus >= 0{
+	attackTimer = 12
+	attackType = 0
+	oGame.focus--
+	instance_create_depth(x,y,10,oAttack)
+}
+}
+if fireAtk > 0{
+fireAtk--
+lightAtk = 0
+darkAtk = 0
+}
+if lightAtk > 0{
+fireAtk = 0
+lightAtk--
+darkAtk = 0
+}
+if darkAtk > 0{
+fireAtk = 0
+lightAtk = 0
+darkAtk--
+}

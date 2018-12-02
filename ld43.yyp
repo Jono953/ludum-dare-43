@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "32ec0246-f127-472a-afbc-678d8382a475",
+            "Value": {
+                "id": "8969c8cc-1ef3-4497-adc1-9f8ba5c81d69",
+                "resourcePath": "objects\\oAttack\\oAttack.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "35bc7433-ff40-4c5b-bd74-914612c6afcf",
             "Value": {
                 "id": "5130c925-1400-4b4a-96f3-2c377c5454ce",
@@ -108,6 +116,14 @@
                 "id": "eafb4ebe-d43c-491f-9b23-c726080e0e24",
                 "resourcePath": "views\\3a523abc-a596-4b24-8fab-f7add6a5baa5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3aef1668-bc35-4828-9dc7-a7e4359232d6",
+            "Value": {
+                "id": "55071ff1-0ff8-4d39-bf78-08631940a1c3",
+                "resourcePath": "sprites\\sPlayerAttackLight\\sPlayerAttackLight.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -191,11 +207,27 @@
             }
         },
         {
+            "Key": "6a0de46d-ade5-497b-a400-ce81b19c9990",
+            "Value": {
+                "id": "d4013629-2efa-435b-9824-be326ecbe048",
+                "resourcePath": "sprites\\sAttack\\sAttack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6a798d3e-6002-4d36-82f1-0170bd083015",
             "Value": {
                 "id": "4c2cfe7e-f563-4a6c-8fba-73177a2090e6",
                 "resourcePath": "scripts\\approach\\approach.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6c3be22c-0eaf-4aac-b4d7-a1abcaa27163",
+            "Value": {
+                "id": "5ae85cdf-a04d-438e-996a-c723975c7cce",
+                "resourcePath": "sprites\\sPlayerAttackHeavy\\sPlayerAttackHeavy.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -38,3 +38,24 @@ hsp = 0
 vsp = -spd
 }
 }
+if place_meeting(x,y,oHitbox){
+if instance_nearest(x,y,oHitbox).damageType = "air"{
+hp -= instance_nearest(x,y,oHitbox).damage * resistAir
+}else if instance_nearest(x,y,oHitbox).damageType = "water"{
+hp -= instance_nearest(x,y,oHitbox).damage * resistWater
+}else if instance_nearest(x,y,oHitbox).damageType = "earth"{
+hp -= instance_nearest(x,y,oHitbox).damage * resistEarth
+}else if instance_nearest(x,y,oHitbox).damageType = "fire"{
+hp -= instance_nearest(x,y,oHitbox).damage * resistFire
+}else if instance_nearest(x,y,oHitbox).damageType = "light"{
+hp -= instance_nearest(x,y,oHitbox).damage * resistLight
+}else if instance_nearest(x,y,oHitbox).damageType = "dark"{
+hp -= instance_nearest(x,y,oHitbox).damage * resistDark
+}else{
+hp -= instance_nearest(x,y,oHitbox).damage
+}
+instance_destroy(instance_nearest(x,y,oHitbox))	
+}
+if hp < 0{
+instance_destroy()	
+}
