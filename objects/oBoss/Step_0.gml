@@ -114,3 +114,6 @@ spd = random_range(20,30)
 image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255))
 }
 }
+if distance_to_object(oPlayer) < 500 and irandom(60000) > 59800{
+	instance_create_depth(x,y,-10,oFireballEnemy)
+}

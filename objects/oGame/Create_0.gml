@@ -24,7 +24,13 @@ colors[15] = make_color_rgb(0,0,0)
 for(i=0;i<100;i++){
 instance_create_depth(irandom(5760),irandom(7560),-10,oMushroomEnergy)
 }
-for(i=0;i<100;i++){
+for(i=0;i<250;i++){
+with instance_create_depth(irandom(5760),irandom(7560),-y,oTree){
+sprite_index = choose(sGrassSmall,sGrassSmall,sGrassSmall,sGrassMed,sGrassMed,sGrassLar)
+image_index = irandom(30)
+}
+}
+for(i=0;i<50;i++){
 ranNum = irandom(100)
 if ranNum > 95{
 with instance_create_depth(irandom(5760),irandom(7560),-10,oEnemy){
@@ -49,7 +55,7 @@ resistEarth = 1
 resistFire = 1
 resistLight = 0
 resistDark = 3
-hp = 35
+hp = 75
 spd = 32
 image_blend = make_color_rgb(255,255,255)	
 	}
@@ -63,9 +69,51 @@ resistEarth = 1
 resistFire = 0
 resistLight = 10
 resistDark = 1
-hp = 20
+hp = 40
 spd = 16
-image_blend = make_color_rgb(225,25,25)
+image_blend = make_color_rgb(0,0,255)
+	}
+}else if ranNum > 40{
+	with instance_create_depth(irandom(5760),irandom(7560),-10,oEnemy){
+attackType = "make_fire"
+sprite_index = sEnemy
+resistAir = 6
+resistWater = 0
+resistEarth = 1
+resistFire = 6
+resistLight = 1
+resistDark = 1
+hp = 30
+spd = 20
+image_blend = make_color_rgb(255,255,0)
+	}
+}else if ranNum > 20{
+	with instance_create_depth(irandom(5760),irandom(7560),-10,oEnemy){
+attackType = "make_fire"
+sprite_index = sEnemy2
+resistAir = 32
+resistWater = 0.1
+resistEarth = 0.1
+resistFire = 0.1
+resistLight = 0.1
+resistDark = 0.1
+hp = 1
+spd = 16
+image_blend = make_color_rgb(225,255,25)
+	}
+}else{
+	with instance_create_depth(irandom(5760),irandom(7560),-10,oEnemy){
+attackType = "charge"
+sprite_index = sEnemy
+resistAir = 25
+resistWater = 25
+resistEarth = 25
+resistFire = 25
+resistLight = 25
+resistDark = 25
+hp = 5
+spd = 20
+image_blend = make_color_rgb(255,255,255)
 	}
 }
 }

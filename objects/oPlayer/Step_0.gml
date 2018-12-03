@@ -1,5 +1,6 @@
 zx = int64(x/1920)
 zy = int64(y/1080)
+depth = -y
 if keyboard_check(ord("W")){
 vsp = approach(vsp,-spd,1)	
 }else if keyboard_check(ord("S")){

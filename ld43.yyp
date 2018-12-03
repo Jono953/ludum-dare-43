@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "039923ad-be5c-4d7d-ac2f-e31e375531d4",
+            "Value": {
+                "id": "c1c43cd9-471a-4cf1-937e-e1fa7b285bda",
+                "resourcePath": "rooms\\rStart\\rStart.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "05555a78-babf-430f-8609-8e5fa44b4fb0",
             "Value": {
                 "id": "976c11c7-cc22-4648-b81a-c0f9b9e97df2",
@@ -335,6 +343,14 @@
             }
         },
         {
+            "Key": "4fac68db-5c61-4f71-8243-ca7540276a2a",
+            "Value": {
+                "id": "33c7296b-4355-4cd2-9b4e-4702cf249590",
+                "resourcePath": "sprites\\logoTA\\logoTA.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4faf6d8a-6da4-4b75-a756-de54ef9c03d3",
             "Value": {
                 "id": "d1a5fde9-2036-4659-bccc-59d10f3af678",
@@ -511,6 +527,22 @@
             }
         },
         {
+            "Key": "7fc8152f-1d35-4e0a-a33e-e0fb3a956667",
+            "Value": {
+                "id": "4ddf8f44-6ff3-4bf5-b7be-e4ac0bd5c55e",
+                "resourcePath": "sprites\\sButtonStart\\sButtonStart.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "82307ad3-47ce-4f63-8c9b-c79adb7b64a1",
+            "Value": {
+                "id": "ba0c96c3-1dfc-4d5d-acf0-668ce00179a2",
+                "resourcePath": "objects\\oStart\\oStart.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "83f43121-957a-4af1-80ff-3544e5ff3bb4",
             "Value": {
                 "id": "17eae959-757e-417c-9c4c-3af2a5a381a1",
@@ -540,6 +572,14 @@
                 "id": "73e0468c-4708-4bcf-8c47-2fe5ed4415d6",
                 "resourcePath": "sprites\\Asteroid\\Asteroid.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8a26ec43-bf4a-433e-aabd-6ada16ec19fb",
+            "Value": {
+                "id": "a47c6386-7192-4cb3-84fc-8025a725c032",
+                "resourcePath": "objects\\oFireballEnemy\\oFireballEnemy.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -684,6 +724,14 @@
                 "id": "5b6d4266-5e2b-46d8-b02a-eb631e743a7c",
                 "resourcePath": "views\\b3945a2e-e52e-49e0-af63-54d50f2f4c7c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b4e2adf8-b339-4437-b327-1a1e58c6238e",
+            "Value": {
+                "id": "3bd6d579-21eb-4904-a057-8070163725b0",
+                "resourcePath": "objects\\oOrb\\oOrb.yy",
+                "resourceType": "GMObject"
             }
         },
         {
