@@ -2,7 +2,7 @@ if type <= 5{
 if oCrafting.slot1 = -1 and oGame.fc[type] > 0{
 	oGame.fc[type]--
 	oCrafting.slot1 = type
-}else if oCrafting.slot2 = -1 and oGame.fc[type] >= 0{
+}else if oCrafting.slot2 = -1 and oGame.fc[type] > 0{
 	oGame.fc[type]--
 	oCrafting.slot2 = type
 }

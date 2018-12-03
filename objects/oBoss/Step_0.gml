@@ -8,66 +8,6 @@ x = clamp(x,zx*1920+32,zx*1920+1920-32)
 y = clamp(y,zy*1080+32,zy*1080+1080-32)
 
 if zx = oPlayer.zx and zy = oPlayer.zy{
-if !place_meeting(x+hsp,y,oWall){
-	x += hsp
-	hsp = approach(hsp,0,1)
-}else{
-hsp = 0	
-}
-if !place_meeting(x,y+vsp,oWall){
-	y += vsp
-	vsp = approach(vsp,0,1)
-}else{
-vsp = 0	
-}
-if actionTimer = 0{
-if distance_to_object(oPlayer) <= 500 and attackType = "charge"{
-	if slowTime = 0{
-	move_towards_point(oPlayer.x,oPlayer.y,spd*3)
-	}else{
-	move_towards_point(oPlayer.x,oPlayer.y,spd*1.5)	
-	}
-	hsp = hspeed
-	vsp = vspeed 
-	hspeed = 0
-	vspeed = 0
-}else if distance_to_object(oPlayer) <= 500 and attackType = "make_bomb"{
-	if irandom(100) > 30{
-	instance_create_depth(x,y,-10,oBomb)	
-	}
-	hsp = random_range(-spd*3,spd*3)
-	vsp = random_range(-spd*3,spd*3)
-}else if distance_to_object(oPlayer) <= 500 and attackType = "make_fire"{
-	
-}
-action = irandom_range(0,5)	
-actionTimer = irandom_range(30,60)
-
-}
-if actionTimer > -1{
-actionTimer--	
-}
-if distance_to_object(oPlayer) <= 500 and attackType = "chase"{
-	move_towards_point(oPlayer.x,oPlayer.y,spd*1.33)
-}else if distance_to_object(oPlayer) > 500{
-if action = 1{
-hsp = spd
-vsp = 0
-}
-if action = 2{
-hsp = -spd
-vsp = 0
-}
-if action = 3{
-hsp = 0
-vsp = spd
-}
-if action = 4{
-hsp = 0
-vsp = -spd
-}
-}
-
 if invun > 0{
 invun--	
 if image_alpha = 1{
@@ -118,7 +58,7 @@ if invun = 0{
 for(i=0;i<10;i++){
 instance_create_depth(x,y,-10,oParticleFire)	
 }
-damage(5 * resistFire)
+damage(0)
 invun = 30
 }
 }
@@ -137,7 +77,7 @@ if invun = 0{
 for(i=0;i<10;i++){
 effect_create_above(ef_flare,x+random_range(-80,80),y+random_range(-80,80),1,c_yellow)	
 }
-damage(10 * resistLight)
+damage(0)
 invun = 30
 }
 }
@@ -150,7 +90,7 @@ if invun = 0{
 for(i=0;i<10;i++){
 effect_create_above(ef_flare,x+random_range(-80,80),y+random_range(-80,80),1,c_purple)	
 }
-damage(10 * resistDark)
+damage(0)
 invun = 30
 }
 }
@@ -160,8 +100,17 @@ spd = 6
 }else{
 spd = 12	
 }
-if place_meeting(x,y,oPetrify){
-alarm_set(0,15)
-sprite_index = Petrified
+if irandom(60000) > 59800{
+	with instance_create_depth(x,y,-10,oEnemy){
+attackType = "charge"
+resistAir = random_range(0,4)
+resistWater = random_range(0,4)
+resistEarth = random_range(0,4)
+resistFire = random_range(0,4)
+resistLight = random_range(0,4)
+resistDark = random_range(0,4)
+hp = irandom_range(50,80)
+spd = random_range(20,30)
+image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255))
 }
-image_speed = (abs(hsp) + abs(vsp))*2
+}

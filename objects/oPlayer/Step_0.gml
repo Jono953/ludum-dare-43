@@ -71,12 +71,9 @@ image_xscale = 1
 if x > mouse_x{
 image_xscale = -1	
 }
-if oGame.focus >= 0{
 	attackTimer = 12
 	attackType = 0
-	oGame.focus--
 	instance_create_depth(x,y,10,oAttack)
-}
 }
 if fireAtk > 0{
 fireAtk--
@@ -121,6 +118,28 @@ hsp -= 24
 hsp += 24		
 }
 if y < instance_nearest(x,y,oEnemy).y{
+vsp -= 24	
+}else{
+vsp += 24		
+}
+}
+
+if invun = 0 and place_meeting(x,y,oBoss){
+if instance_exists(oCrafting){
+instance_destroy(oCrafting)
+instance_destroy(oButton)
+}
+invun = 30
+with oGame{
+damage(irandom_range(20,40))	
+}
+
+if x < instance_nearest(x,y,oBoss).x{
+hsp -= 24	
+}else{
+hsp += 24		
+}
+if y < instance_nearest(x,y,oBoss).y{
 vsp -= 24	
 }else{
 vsp += 24		
