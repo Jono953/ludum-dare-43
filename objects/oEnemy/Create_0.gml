@@ -1,6 +1,8 @@
 hsp = 0
 vsp = 0
 z = 0
+zx = int64(x/1920)
+zy = int64(y/1080)
 if place_meeting(x,y,oWall){
 x += irandom_range(-256,256)
 y += irandom_range(-256,256)
@@ -26,3 +28,6 @@ attackType = "charge"
 hp = 25
 invun = 0
 image_blend = c_red
+if zx = 1 and zy = 6{
+y += 6000	
+}

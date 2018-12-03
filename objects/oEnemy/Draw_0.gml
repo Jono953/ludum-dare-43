@@ -1,5 +1,5 @@
 draw_shadow()
-if fireTime > 0 or attackType = "make_fire"{
+if fireTime > 0{
 	draw_sprite(Firebackground,0,x,y)	
 }
 if slowTime > 0{

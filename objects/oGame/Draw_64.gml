@@ -4,6 +4,7 @@ draw_healthbar(50,60,480,80,focus,c_red,c_purple,c_blue,0,true,true)
 draw_set_font(fFiner)
 draw_text_color(50,38,"HP: "+string(hp)+"/"+string(mhp),c_black,c_black,c_black,c_black,1)
 draw_text_color(50,58,"FOCUS: "+string(focus)+"%",c_white,c_white,c_white,c_white,1)
+
 draw_set_font(fGame)
 for(i=0;i<6;i++){
 draw_sprite_ext(sFlowers,i,(i*80)+1460,64,0.5,0.5,0,c_white,1)
