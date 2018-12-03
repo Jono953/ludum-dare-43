@@ -1,9 +1,9 @@
-fc[0] = 100
-fc[1] = 100
-fc[2] = 100
-fc[3] = 100
-fc[4] = 100
-fc[5] = 100
+fc[0] = 0
+fc[1] = 0
+fc[2] = 0
+fc[3] = 0
+fc[4] = 0
+fc[5] = 0
 potions = ds_list_create()
 colors[0] = make_color_rgb(60,60,60)
 colors[1] = make_color_rgb(175,206,255)
@@ -22,6 +22,9 @@ colors[13] = make_color_rgb(255,231,181)
 colors[14] = make_color_rgb(34,5,56)
 colors[15] = make_color_rgb(0,0,0)
 for(i=0;i<100;i++){
+instance_create_depth(irandom(5760),irandom(7560),-10,oMushroomEnergy)
+}
+for(i=0;i<100;i++){
 ranNum = irandom(100)
 if ranNum > 95{
 with instance_create_depth(irandom(5760),irandom(7560),-10,oEnemy){
@@ -36,6 +39,34 @@ hp = 50
 spd = 24
 image_blend = make_color_rgb(100,100,100)
 }
+}else if ranNum > 85{
+	with instance_create_depth(irandom(5760),irandom(7560),-10,oEnemy){
+attackType = "make_bomb"
+sprite_index = sEnemy3
+resistAir = 1
+resistWater = 1
+resistEarth = 1
+resistFire = 1
+resistLight = 0
+resistDark = 3
+hp = 35
+spd = 32
+image_blend = make_color_rgb(255,255,255)	
+	}
+}else if ranNum > 65{
+	with instance_create_depth(irandom(5760),irandom(7560),-10,oEnemy){
+attackType = "chase"
+sprite_index = sEnemy2
+resistAir = 1
+resistWater = 3
+resistEarth = 1
+resistFire = 0
+resistLight = 10
+resistDark = 1
+hp = 20
+spd = 16
+image_blend = make_color_rgb(225,25,25)
+	}
 }
 }
 name[0] = "Failure"
@@ -43,7 +74,7 @@ name[1] = "Self-Hastening"
 name[2] = "Conjure Comet"
 name[3] = "Conjure Flare"
 name[4] = "Summon Air Bolt"
-name[5] = "Conjure Sword"
+name[5] = "Reveal Enemies"
 name[6] = "Augment Environment: Enemy Slowness"
 name[7] = "Augment Attack: Fire"
 name[8] = "Augment Attack: Light"
@@ -57,17 +88,17 @@ name[15] = "Division"
 
 desc[0] = "Deals 10 damage to player. Don't waste your materials."
 desc[1] = "Doubles movement speed for 15 seconds."
-desc[2] = "Summons Dust Storm that deals earth damage. Lingers for five seconds."
-desc[3] = "Summons Flame Tornado that deals fire damage. Lingers for five seconds."
+desc[2] = "Summons comet that falls down, dealing earth damage."
+desc[3] = "Summons fireball that falls down, dealing fire damage."
 desc[4] = "Summons Air Bolt that deals air damage. Disappears on contact with wall or enemy."
-desc[5] = "Summons Storm of Swords that deals dark damage. Lingers for five seconds."
+desc[5] = "Reveals all enemies for 10 seconds."
 desc[6] = "Slows all enemies on screen for 10 seconds."
 desc[7] = "Causes player's attack to deal fire damage for 10 seconds"
 desc[8] = "Causes player's attack to deal light damage for 10 seconds"
 desc[9] = "Causes player's attack to deal dark damage for 10 seconds"
 desc[10] = "Summons Fireball that deals fire damage. Disappears on contact with wall or enemy."
 desc[11] = "Summons Monolith that falls down and deals light damage in a large area."
-desc[12] = "Summons bolt that turns an enemy into stone."
+desc[12] = "Summons ball that turns an enemy into stone."
 desc[13] = "Sets every enemy on screen on holy fire dealing light damage over 10 seconds."
 desc[14] = "Sets every enemy on screen on cursed fire dealing dark damage over 10 seconds."
 desc[15] = "Kills all enemies on screen instantly, healing the player for 10 hp per kill."
@@ -85,9 +116,9 @@ cost[9] = 25
 cost[10] = 15
 cost[11] = 20
 cost[12] = 25
-cost[13] = 30
-cost[14] = 30
-cost[15] = 99
+cost[13] = 50
+cost[14] = 50
+cost[15] = 249
 
 type[0] = 0
 type[1] = 0
@@ -106,8 +137,8 @@ type[13] = 2
 type[14] = 2
 type[15] = 2
 
-hp = 100
-mhp = 100
+hp = 250
+mhp = 250
 focus = 100
 currentRoom = 0
 selector = 0

@@ -10,4 +10,4 @@ darkAtk = 0
 attackTimer = -1;
 attackType = -1;
 invun = 0
-fireTime = 60;
+fireTime = 0;

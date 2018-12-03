@@ -35,6 +35,9 @@ if currentPotion = 4{
 if currentPotion = 5{
 	oPlayer.attackTimer = 25
 	oPlayer.attackType = 1
+	with oEnemy{
+	revealTime = 300	
+	}
 }
 if currentPotion = 6{
 	oPlayer.attackTimer = 25
@@ -87,7 +90,8 @@ if currentPotion = 11{
 if currentPotion = 12{
 	//projectile	
 		oPlayer.attackTimer = 25
-	oPlayer.attackType = 1	
+	oPlayer.attackType = 1
+	instance_create_depth(x,y,-10,oPetrify)
 }
 if currentPotion = 13{
 	//screen overlay

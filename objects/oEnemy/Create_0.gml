@@ -5,10 +5,12 @@ if place_meeting(x,y,oWall){
 x += irandom_range(-256,256)
 y += irandom_range(-256,256)
 }
+dieTime = -1
 fireTime = 0;
 lightTime = 0
 darkTime = 0
 slowTime = 0;
+revealTime = 0;
 dsp = 0
 spd = 12
 action = 0

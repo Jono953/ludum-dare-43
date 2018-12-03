@@ -10,7 +10,7 @@ y = oPlayer.y
 
 if focus < 100{
 if oPlayer.vsp = 0 and oPlayer.hsp = 0{
-focus += 0.04
+focus += 0.5
 }else{
 focus += 0.01
 }
@@ -38,4 +38,7 @@ for(i=0;i<=5;i++){
 if fc[i] > 99{
 	fc[i] = 99	
 }
+}
+if hp <= 0{
+room_restart()	
 }

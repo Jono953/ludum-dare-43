@@ -6,11 +6,11 @@ draw_text_color(50,38,"HP: "+string(hp)+"/"+string(mhp),c_black,c_black,c_black,
 draw_text_color(50,58,"FOCUS: "+string(focus)+"%",c_white,c_white,c_white,c_white,1)
 draw_set_font(fGame)
 for(i=0;i<6;i++){
-draw_sprite_ext(sFlowers,i,(i*80)+1460,64,0.5,0.5,0,c_white,0.5)
+draw_sprite_ext(sFlowers,i,(i*80)+1460,64,0.5,0.5,0,c_white,1)
 if i=4{
-draw_text_color((i*80)+1470,75,string(fc[i]),c_black,c_black,c_black,c_black,0.5)
+draw_text_color((i*80)+1470,75,string(fc[i]),c_black,c_black,c_black,c_black,1)
 }else{
-draw_text_color((i*80)+1470,75,string(fc[i]),c_white,c_white,c_white,c_white,0.5)
+draw_text_color((i*80)+1470,75,string(fc[i]),c_white,c_white,c_white,c_white,1)
 }
 }
 for(i=0;i<ds_list_size(potions);i++){
@@ -27,11 +27,9 @@ draw_sprite(sRune,0,i*80+64,1080-110)
 draw_sprite_ext(sRune,1,i*80+64,1080-110,1,1,0,colors[ds_list_find_value(potions,i)],1)
 }
 }
-draw_set_font(fFine)
-draw_text(0,1080-250,"HP: "+string(hp)+"/"+string(mhp))
-draw_text(0,1080-280,"Focus: "+string(focus)+"%")
-draw_text(0,1080-310,"player zx,zy "+string(oPlayer.zx)+","+string(oPlayer.zy))
-draw_text(0,1080-340,"camera zx,zy "+string(oCamera.zx)+","+string(oCamera.zy))
+
 
 draw_set_font(fGame)
+if ds_list_size(potions) > 0{
 draw_sprite(sSelector,0,selector*80,1080-192)
+}

@@ -1,6 +1,9 @@
 zx = int64(x/1920)
 zy = int64(y/1080)
-
+if place_meeting(x,y,oWall){
+x += irandom_range(-256,256)
+y += irandom_range(-256,256)
+}
 x = clamp(x,zx*1920+32,zx*1920+1920-32)
 y = clamp(y,zy*1080+32,zy*1080+1080-32)
 
@@ -119,6 +122,12 @@ damage(5 * resistFire)
 invun = 30
 }
 }
+if revealTime > 0{
+revealTime--	
+if irandom(100) > 60{
+effect_create_above(ef_flare,x+random_range(-80,80),y+random_range(-80,80),1,c_white)
+}
+}
 if lightTime > 0{
 lightTime--
 if irandom(100) > 60{
@@ -151,7 +160,7 @@ spd = 6
 }else{
 spd = 12	
 }
-image_speed = abs(hsp+vsp) * 2
-if abs(hsp+vsp) = 0{
-image_index = 0	
+if place_meeting(x,y,oPetrify){
+alarm_set(0,15)
+sprite_index = Petrified
 }

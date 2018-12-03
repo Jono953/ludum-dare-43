@@ -141,3 +141,9 @@ damage(5)
 invun = 30
 }
 }
+if place_meeting(x,y,oRecovery){
+with oGame{
+damage(irandom_range(-60,-25))	
+}
+instance_destroy(instance_nearest(x,y,oRecovery))
+}
