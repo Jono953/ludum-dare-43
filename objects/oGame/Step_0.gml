@@ -31,14 +31,17 @@ if keyboard_check_pressed(ord("Q")){
 if hp > mhp{
 hp = mhp	
 }
-if keyboard_check_pressed(ord("R")){
-	room_restart()	
-}
+
 for(i=0;i<=5;i++){
 if fc[i] > 99{
 	fc[i] = 99	
 }
 }
 if hp <= 0{
-room_restart()	
+room_goto(rDead)	
+}
+if oPlayer.zy = 0{
+music(penbox56)	
+}else{
+music(penbox57_2)	
 }

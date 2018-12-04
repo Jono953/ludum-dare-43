@@ -24,7 +24,7 @@ colors[15] = make_color_rgb(0,0,0)
 for(i=0;i<100;i++){
 instance_create_depth(irandom(5760),irandom(7560),-10,oMushroomEnergy)
 }
-for(i=0;i<250;i++){
+for(i=0;i<1000;i++){
 with instance_create_depth(irandom(5760),irandom(7560),-y,oTree){
 sprite_index = choose(sGrassSmall,sGrassSmall,sGrassSmall,sGrassMed,sGrassMed,sGrassLar)
 image_index = irandom(30)

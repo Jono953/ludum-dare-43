@@ -1,13 +1,8 @@
+if room = rStart{
 draw_set_halign(fa_center)
 draw_set_font(fFine)
 draw_text(1412,700,"--STORY--")
 draw_text(1412,885,"CLICK TO START")
 draw_text(1412,915,"PRESS T FOR TUTORIAL")
 draw_set_font(fFiner)
-draw_text(1412,735,"For years, the keeper of the forest has watched over Fairlie Forest and the nearby village. ")
-draw_text(1412,755,"However, recently, many have died of a strange affliction that appears to have come from the forest. ")
-draw_text(1412,775,"Before you become one of the many who died to this infliction,")
-draw_text(1412,795,"you decided to prepare to venture into the forest to find out and solve this problem once and for all.")
-draw_text(1412,815,"However, you haven't come unarmed. You are able to harvest the energies of the forest and combine them with your blood to")
-draw_text(1412,835,"create brews, scrolls, and runes to defend yourself from the corrupted beings who reside there.")
-draw_text(1412,855,"To save the village, you must sacrifice yourself to defeat The Affliction.")
+}

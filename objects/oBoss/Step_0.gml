@@ -19,6 +19,7 @@ image_alpha = 1
 image_alpha = 1	
 }
 if place_meeting(x,y,oHitbox) and invun = 0{
+sound(bosshurt)
 invun = 15
 if instance_nearest(x,y,oHitbox).damageType = "air"{
 damage(instance_nearest(x,y,oHitbox).damage2 * resistAir)

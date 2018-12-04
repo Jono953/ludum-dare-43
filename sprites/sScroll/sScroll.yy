@@ -6,69 +6,69 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 94,
-    "bbox_left": 27,
-    "bbox_right": 99,
-    "bbox_top": 9,
+    "bbox_bottom": 110,
+    "bbox_left": 2,
+    "bbox_right": 125,
+    "bbox_top": 17,
     "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 0,
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "554854dc-1df1-4b3d-8af9-e86ae9da6099",
+            "id": "7ed7429f-d36c-4cb5-9cd2-02dcd41c2d7d",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "d6911f0b-6411-400c-9a44-74f9d63f4bdd",
             "compositeImage": {
-                "id": "05a4f35b-f4f4-4ca3-a003-ca6e5fc459c4",
+                "id": "a12df2bb-83bc-41b8-9404-df2a3c6555a4",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "554854dc-1df1-4b3d-8af9-e86ae9da6099",
+                "FrameId": "7ed7429f-d36c-4cb5-9cd2-02dcd41c2d7d",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "2757c6a8-e071-4a24-bdbf-922017c6b5a6",
+                    "id": "dee9bb66-2250-4d09-8b17-9621f17a6e90",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "554854dc-1df1-4b3d-8af9-e86ae9da6099",
-                    "LayerId": "122b953c-3207-42e3-95fc-8e8e52828ece"
+                    "FrameId": "7ed7429f-d36c-4cb5-9cd2-02dcd41c2d7d",
+                    "LayerId": "32642dc2-d2e5-4723-8395-874fef369125"
                 },
                 {
-                    "id": "cd64e8d1-709b-47be-97ed-49626774bfd6",
+                    "id": "6f03bbd6-cd41-4b87-a2ed-7ec1472018e9",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "554854dc-1df1-4b3d-8af9-e86ae9da6099",
-                    "LayerId": "32642dc2-d2e5-4723-8395-874fef369125"
+                    "FrameId": "7ed7429f-d36c-4cb5-9cd2-02dcd41c2d7d",
+                    "LayerId": "122b953c-3207-42e3-95fc-8e8e52828ece"
                 }
             ]
         },
         {
-            "id": "aadf9740-6ad7-4ead-8752-9f849dd5c214",
+            "id": "dae0b13f-a9c3-4023-813f-46a8a5c184e1",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "d6911f0b-6411-400c-9a44-74f9d63f4bdd",
             "compositeImage": {
-                "id": "3e1ce209-bc94-4123-b3f0-2cf71b6afedf",
+                "id": "eae9b6b9-f208-464c-85f8-ac84c6be070f",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "aadf9740-6ad7-4ead-8752-9f849dd5c214",
+                "FrameId": "dae0b13f-a9c3-4023-813f-46a8a5c184e1",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "e4f2259b-b6e2-45cc-81be-05cab6837a44",
+                    "id": "fc11ed86-4fa2-4821-a01f-6fa70e5ec1c0",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "aadf9740-6ad7-4ead-8752-9f849dd5c214",
+                    "FrameId": "dae0b13f-a9c3-4023-813f-46a8a5c184e1",
                     "LayerId": "32642dc2-d2e5-4723-8395-874fef369125"
                 },
                 {
-                    "id": "345b2791-2c52-4ead-9c33-ce1e2ff42e51",
+                    "id": "65244817-b99f-441b-857e-779603584590",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "aadf9740-6ad7-4ead-8752-9f849dd5c214",
+                    "FrameId": "dae0b13f-a9c3-4023-813f-46a8a5c184e1",
                     "LayerId": "122b953c-3207-42e3-95fc-8e8e52828ece"
                 }
             ]
@@ -103,7 +103,7 @@
     ],
     "origin": 4,
     "originLocked": false,
-    "playbackSpeed": 15,
+    "playbackSpeed": 0,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
     "sepmasks": false,
